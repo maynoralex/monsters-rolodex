@@ -1,19 +1,17 @@
 import './card.styles.css'
-
+import { Monster } from '../../App'
 
 type CardProps = {
-  id: number,
-  name: string,
-  email: string
+  monster: Monster
 }
 
-const Card = ({name, email, id}:CardProps) => {
+const Card = ({monster}:CardProps) => {
   
   return (
     <div className='card-container'> 
-      <img src={`https://robohash.org/${id}?set=set2&size=180x180`}></img>
-      <h3>{ name } </h3>
-      <p>{ email }</p>
+      <img src={`https://robohash.org/${monster.id}?set=set2&size=180x180`}></img>
+      <h3>{ monster.name } </h3>
+      <p>{ monster.email }</p>
     </div>
   )
 }

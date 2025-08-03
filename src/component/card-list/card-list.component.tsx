@@ -10,8 +10,8 @@ const CardList = ({ monsters }:CardListProps) => {
     return (
         <div className='card-list-container'>
         {
-            monsters.map(({ name, email, id }, idx) => {
-            return <Card key={`${name}-${idx}`} name={name} email={email} id={id}></Card>; 
+            monsters.map((monster, idx) => {
+            return <Card key={`${monster.name}-${idx}`} monster={monster}></Card>; 
           })
         }
         </div>
